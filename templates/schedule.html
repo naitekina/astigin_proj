@@ -1,0 +1,91 @@
+{% extends 'navBar.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+    {% block style %}
+    <link rel="stylesheet" href="{% static 'scheduleStyle.css' %}">
+    {% endblock %}
+    
+    {% block content %}
+    <br><br>    
+        <hr class = "header">
+        <div class = "header">
+            SCHEDULE
+        </div>
+        <hr class = "header">
+        <br><br>
+        
+        {% for trip in trips %}
+        
+        <div class = "bg">
+            
+            <div class = "trip_header">
+                <div class = "trip_header_left">
+                    {{ trip.trip_date.trip_sched|date:"d F, Y" }}
+                </div>
+                <div class = "trip_header_right">
+                    ID {{ trip.trip_id }}
+                </div>
+            </div>
+        
+            <div class = "trip_details ">
+                
+                <div class = "details_train">
+                    <!-- PICTURE -->
+                    <img src = "{% static 'img\train1.png' %}" class = "details_train">
+                </div>
+
+                <div>
+                    <div class = "trip_details_date">
+                        <div class = "trip_details_time">
+                            {{ trip.trip_departure.time|time:"h:i A" }}
+                        </div>
+                        {{ trip.trip_departure.date|date:"d M, Y" }}
+                    </div>
+                    <div class = "trip_details_station">
+                        {{ trip.trip_origin }}
+                    </div>
+                </div>
+
+                <div class = "details_arrow">
+                    <!-- PICTURE -->
+                    <img src = "{% static 'img\arrow2.png' %}" class = "details_arrow">
+                </div>
+
+                <div>
+                    <div class = "trip_details_date">
+                         <div class = "trip_details_time">
+                            {{ trip.trip_arrival.time|time:"h:i A" }}
+                        </div>
+                        {{ trip.trip_arrival.date|date:"d M, Y" }}
+                    </div>
+                    <div class = "trip_details_station">
+                        {{ trip.trip_destination }}
+                    </div>
+                </div>
+
+                <div class = "trip_details_duration">
+                    {{ trip.trip_duration }} 
+                    <div class = "trip_details_duration_2ndrow">HH:MM:SS</div>
+                </div>
+
+                <div class = "trip_details_cost">
+                    {{ trip.trip_cost }} coins
+                </div>
+
+            </div>
+            
+            <div class = "trip_footer">
+                <a href = "{{ trip.trip_id }}/details/" class = "details-button">
+                    More details. >>
+                </a>
+            </div>
+        </div>  
+        <br>
+        
+        {% endfor %}
+        <br><br><br><br><br><br><br><br><br>
+    {% endblock %}
+  
+</html>
+

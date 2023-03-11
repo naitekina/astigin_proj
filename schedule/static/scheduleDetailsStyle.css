@@ -1,0 +1,144 @@
+body {
+    background-color: #F6F3E1;
+}
+
+hr.header {
+    width: 60%;
+    background-color: #FBCD15;
+    outline: #FBCD15;
+    height: 1px;
+}
+
+div.details-header {
+    font-family: 'dongle-regular';
+    font-size: 48px;
+    margin: auto;
+    text-align: center;
+    width: 80%;
+    background-color: #1D1F50;
+    border-radius: 10px;
+    color: #FBFAF6;
+}
+
+div.details-body {
+    margin: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    width: 50%;
+    border-radius: 10px;
+}
+
+.header-container {
+    display: grid;
+    grid-template-columns: 20% 50% 30%;
+}
+
+img.header-pic {
+    height: 100px;
+    width: 100px;
+}
+
+div.header-pic {
+    margin: auto;
+}
+
+div.header-date {
+    margin: auto;
+    font-family: 'podkova-regular';
+    font-size: 24px;
+    margin-left: 10px;
+    color: #1D1F50;
+}
+
+div.header-cost {
+    margin: auto;
+    margin-right: 30px;
+    font-family: 'dongle-regular';
+    color: #FBCD15;
+    font-size: 36px;
+}
+
+div.detail-title {
+    font-family: 'dongle-regular';
+    font-size: 36px;
+    width: 70%;
+    margin: auto;
+    margin-left: 10%;
+    color: #1D1F50;
+    margin-top: 20px;
+}
+
+div.details {
+    width: 70%;
+    margin: auto;
+    font-family: 'podkova-regular';
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+div.detail-subtitle {
+    margin: auto;
+    margin-left: 0;
+    margin-top: 5px;
+}
+
+div.detail-content {
+    font-family: 'jakarta-regular';
+    color: #118791;
+    margin-top: 2px;
+}
+
+.subheader {
+    width: 60%;
+    background-color: #b3b3b3;
+    outline: #b3b3b3;
+    height: 0.5px;
+}   
+
+
+@font-face {
+    font-family: 'podkova-regular';
+    src: url('fonts/Podkova-Regular.woff');
+}
+
+@font-face {
+    font-family: 'podkova-bold';
+    src: url('fonts/Podkova-Bold.woff');
+}
+
+@font-face {
+    font-family: 'podkova-extrabold';
+    src: url('fonts/Podkova-ExtraBold.woff');
+}
+
+@font-face {
+    font-family: 'podkova-medium';
+    src: url('fonts/Podkova-Medium.woff');
+}
+
+@font-face {
+    font-family: 'dongle-regular';
+    src: url('fonts/Dongle-Regular.woff');
+}
+
+@font-face {
+    font-family: 'dongle-bold';
+    src: url('fonts/Dongle-Bold.woff');
+}
+
+@font-face {
+    font-family: 'dongle-light';
+    src: url('fonts/Dongle-Light.woff');
+}
+
+@font-face {
+    font-family: 'jakarta-italic';
+    src: url('fonts/PlusJakartaSans-Italic-VariableFont_wght.woff');
+}
+
+@font-face {
+    font-family: 'jakarta-regular';
+    src: url('fonts/PlusJakartaSans-VariableFont_wght.woff');
+}

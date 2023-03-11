@@ -1,0 +1,121 @@
+{% extends 'navBar.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+    {% block style %}
+    <link rel="stylesheet" href="{% static 'scheduleDetailsStyle.css' %}">
+    {% endblock %}
+    
+    {% block content %}
+    <br><br>    
+    <hr class = "header">
+        <div class = "details-header">
+            TRIP ID {{ details.trip_id }}
+        </div>
+
+        <hr class = "header">
+        <br><br>
+        <div class = "details-body">
+            <div class = "header-container">
+                <div class = "header-pic">
+                    <img src = "{% static 'img\train1.png' %}" class = "header-pic">
+                </div>
+    
+                <div class = "header-date">
+                    {{ details.trip_date.trip_sched|date:"F d, Y" }}
+                </div>
+    
+                <div class = "header-cost">
+                    {{ details.trip_cost }} coins
+                </div>
+            </div>
+            <hr class = "subheader">
+            
+            <div>
+                <div class = "detail-title">
+                    ORIGIN
+                </div>
+    
+                <div class = "details">
+                    <div class = "detail-subtitle">
+                        Station: 
+                    </div>
+
+                    <div class = "detail-content">
+                        {{ details.trip_origin }}
+                    </div>
+                 </div>
+    
+                <div class = "details">
+                    <div class = "detail-subtitle">
+                        Date of Departure: 
+                    </div>
+
+                    <div class = "detail-content">
+                        {{ details.trip_departure.date|date:"F d, Y" }}
+                    </div>
+                </div>
+    
+                <div class = "details">
+                    <div class = "detail-subtitle">
+                        Time of Departure: 
+                    </div>
+
+                    <div class = "detail-content">
+                        {{ details.trip_departure.time|time:"h:i A" }}
+                    </div>
+                    
+                </div>
+            </div>
+            <br>
+            <div>
+                <div class = "detail-title">
+                    DESTINATION
+                </div>
+    
+                <div class = "details">
+                    <div class = "detail-subtitle">
+                        Station: 
+                    </div>
+
+                    <div class = "detail-content">
+                        {{ details.trip_destination }}
+                    </div>
+                   
+                </div>
+    
+                <div class = "details">
+                    <div class = "detail-subtitle">
+                        Date of Arrival:
+                    </div>
+
+                    <div class = "detail-content">
+                        {{ details.trip_arrival.date|date:"F d, Y" }}
+                    </div>
+                </div>
+    
+                <div class = "details">
+                    <div class = "detail-subtitle">
+                        Time of Arrival: 
+                    </div>
+
+                    <div class = "detail-content">
+                        {{ details.trip_arrival.time|time:"h:i A" }}
+                    </div>
+                    
+                </div>
+            </div>
+
+            <br><br><br>
+
+            <div>
+                <button onclick = "history.back()">Go Back</button>
+            </div>
+        </div>
+
+        <br><br><br><br><br><br>
+
+    {% endblock %}
+    
+</html>
+

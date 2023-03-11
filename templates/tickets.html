@@ -1,0 +1,61 @@
+{% extends 'navBar.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+    {% block style %}
+    <link rel="stylesheet" href="{% static 'scheduleStyle.css' %}">
+    {% endblock %}
+    
+    {% block content %}
+    <br><br>    
+        <hr class = "header">
+        <div class = "header">
+            CUSTOMERS
+        </div>
+        <hr class = "header">
+        
+        {% for c in customer %}
+        <Br>
+        <div class = "bg">
+            <Br>
+            <div class = "details">
+                <div class = "detail-subtitle">
+                    Customer ID: 
+                </div>
+
+                <div class = "detail-content">
+                    {{ c.customer_id }}
+                </div>
+            </div>
+
+            <div class = "details">
+                <div class = "detail-subtitle">
+                    Name:
+                </div>
+
+                <div class = "detail-content">
+                    {{ c.last_name }}, {{ c.first_name }} {{ c.middle_initial }}.
+                </div>
+            </div>
+            
+            <div class = "details">
+                <div class = "detail-subtitle">
+                    Birthdate:
+                </div>
+
+                <div class = "detail-content">
+                    {{ c.birth_date|date:"F d, Y" }}
+                </div>
+            </div>
+        </div>
+            
+           
+        
+        {% endfor %}
+        <br><br><br><br><br><br><br><br><br>
+
+    
+    {% endblock %}
+  
+</html>
+

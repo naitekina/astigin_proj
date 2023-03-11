@@ -1,0 +1,50 @@
+{% extends 'navBar.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+    {% block style %}
+    <link rel="stylesheet" href="{% static 'scheduleStyle.css' %}">
+    {% endblock %}
+    
+    {% block content %}
+    <br><br>    
+        <hr class = "header">
+        <div class = "header">
+            TAGUIG TRAIN SYSTEM
+        </div>
+        <hr class = "header">
+        <br><br>
+        {% for station in stations %}
+        
+        <div class = "bg">
+            <br>
+            <div class = "details">
+                <div class = "detail-subtitle">
+                    Station ID:
+                </div>
+
+                <div class = "detail-content">
+                    {{ station.station_id }}
+                </div>
+            </div>
+            <div class = "details">
+                <div class = "detail-subtitle">
+                    Station Name: 
+                </div>
+
+                <div class = "detail-content">
+                    {{ station.station_name }}
+                </div>
+            </div>
+            
+            
+        </div>
+            
+        <br>
+        
+        {% endfor %}
+        <br><br><br><br><br><br><br><br><br>
+    {% endblock %}
+  
+</html>
+

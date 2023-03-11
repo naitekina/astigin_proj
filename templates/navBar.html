@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+    <link rel="stylesheet" href="{% static 'navBarStyle.css' %}">
+
+    <body>
+        <div class = "main-container">
+            <div class = "sub-container">
+                <div class = "sidenav row1">
+                    TIRIAN<br>TRAINS
+                </div>
+    
+                <div class = "sidenav row2">
+                    <a class = "nav_effect" href = "/schedule/">SCHEDULE</a>
+                </div>
+                
+                <div class = "sidenav row2">
+                    <a class = "nav_effect" href = "/tickets/">CUSTOMERS</a>
+                </div>
+
+                <div class = "sidenav row2">
+                    <a class = "nav_effect" href = "/stations/">TAGUIG TRAIN SYSTEM</a>
+                </div>
+
+                <div class = "sidenav row2">
+                    <a class = "nav_effect" href = "/trains/">TRAIN MAINTENANCE</a>
+                </div>
+
+                <div class = "sidenav last_row">
+                    <br><br><br><br><br><br><br><br><br><br>
+                    <br><br><br><br><br><br><br><br><br><br>
+                </div>
+            </div>
+            <div class = "container">
+                {% block style%} {% endblock %}
+                {% block content %}
+                {% endblock %}
+            </div>
+            
+        </div>
+
+
+    </body>
+</html>

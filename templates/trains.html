@@ -1,0 +1,90 @@
+{% extends 'navBar.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+    {% block style %}
+    <link rel="stylesheet" href="{% static 'scheduleStyle.css' %}">
+    {% endblock %}
+    
+    {% block content %}
+    <br><br>    
+        <hr class = "header">
+        <div class = "header">
+            TRAIN MAINTENANCE
+        </div>
+        <hr class = "header">
+        
+        {% for details in m_details %}
+        <br>
+        <div class = "bg">
+            <br>
+            <Br>
+            
+            <div class = "details">
+                <div class = "detail-subtitle">
+                    Train ID:
+                </div>
+
+                <div class = "detail-content">
+                    {{ details.train.train_id }}
+                </div>
+            </div>
+            
+            
+            <div class = "details">
+                <div class = "detail-subtitle">
+                    Train Model:
+                </div>
+
+                <div class = "detail-content">
+                    {{ details.train.train_model }}
+                </div>
+            </div>
+             <br>
+            <hr width = 75%>
+            <br>
+            
+            <div class = "details">
+                <div class = "detail-subtitle">
+                    Maintenance ID:
+                </div>
+
+                <div class = "detail-content">
+                    {{ details.maintenance_id }}
+                </div>
+            </div>
+        
+            <div class = "details">
+                <div class = "detail-subtitle">
+                    Date Maintained:
+                </div>
+
+                <div class = "detail-content">
+                    {{ details.date_maintained|date:"F d, Y" }}
+                </div>
+            </div>
+
+            <div class = "details">
+                <div class = "detail-subtitle">
+                    Maintenance Condition:
+                </div>
+
+                <div class = "detail-content">
+                    {{ details.maintenance_condition }}
+                </div>
+            </div>
+             
+            
+            <br>
+        </div>
+            
+           
+        
+        {% endfor %}
+        <br><br><br><br><br><br><br>
+
+    
+    {% endblock %}
+  
+</html>
+

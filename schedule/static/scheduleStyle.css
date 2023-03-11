@@ -1,0 +1,203 @@
+body {
+    background-color: #F6F3E1;
+}
+
+
+div.header {
+    margin: auto;
+    font-family: 'dongle-regular';
+    font-size: 100px;
+    width: 80%;
+    text-align: center;
+    background-color: #1D1F50;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color: #FBFAF6;
+}
+
+hr.header {
+    width: 60%;
+    background-color: #FBCD15;
+    outline: #FBCD15;
+    height: 1px;
+}
+
+
+div.bg {
+    background-color: #ffffff;
+    padding-top: 10px;
+    padding-left: 36px;
+    padding-right: 36px;
+    padding-bottom: 36px;
+    border-radius: 5px;
+    width: 65%;
+    margin: auto;
+}
+
+div.trip_header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 4px;
+}
+
+div.trip_header_left {
+    font-family: 'dongle-regular';
+    font-size: 24px;
+    margin: auto;
+    margin-left: 0;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #037272;
+
+}
+
+div.trip_header_right {
+    font-family: 'jakarta-regular';
+    font-size: 24px;
+    margin-left: auto;
+    margin-top: 10px;
+    color: #fec20f;
+}
+
+div.trip_details {
+    display: grid;
+    grid-template-columns: 100px 200px 30px 200px 140px auto;
+    width: 95%;
+    margin: auto;
+    margin-bottom: 16px;
+    margin-top: 12px;
+}
+
+div.trip_details_date {
+    font-family: 'podkova-regular';
+    font-size: 16px;
+    text-align: center;
+}
+
+div.trip_details_time {
+    font-family: 'jakarta-regular';
+    font-size: 22px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #037272;
+}
+
+div.trip_details_station {
+    font-family: 'podkova-extrabold';
+    font-size: 18px;
+    text-align: center;
+}
+
+img.details_arrow {
+    height: 30px;
+    width: 30px;
+}
+
+div.details_arrow {
+    margin: auto;
+}
+
+div.details_train {
+    margin: auto;
+}
+
+img.details_train {
+    height: 100px;
+    width: 100px;
+}
+
+div.trip_details_duration {
+    font-family: 'jakarta-regular';
+    font-size: 18px;
+    text-align: center; 
+    margin: auto;
+    margin-left: 30px;
+    color: #037272;
+}
+
+div.trip_details_duration_2ndrow {
+    font-family: 'dongle-light';
+    color: #898989;
+    font-size: 20px;
+    text-align: center;
+}
+
+div.trip_details_cost {
+    font-family: 'dongle-bold';
+    font-size: 36px;
+    vertical-align: middle;
+    margin: auto;
+    margin-left: 30px;
+    color: #1c1f4c;
+    
+}
+
+div.details {
+    width: 70%;
+    margin: auto;
+    font-family: 'podkova-regular';
+    margin-top: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+div.detail-subtitle {
+    margin: auto;
+    margin-left: 0;
+    margin-top: 5px;
+}
+
+div.detail-content {
+    font-family: 'jakarta-regular';
+    color: #118791;
+    margin-top: 2px;
+
+
+
+@font-face {
+    font-family: 'podkova-regular';
+    src: url('fonts/Podkova-Regular.woff');
+}
+
+@font-face {
+    font-family: 'podkova-bold';
+    src: url('fonts/Podkova-Bold.woff');
+}
+
+@font-face {
+    font-family: 'podkova-extrabold';
+    src: url('fonts/Podkova-ExtraBold.woff');
+}
+
+@font-face {
+    font-family: 'podkova-medium';
+    src: url('fonts/Podkova-Medium.woff');
+}
+
+@font-face {
+    font-family: 'dongle-regular';
+    src: url('fonts/Dongle-Regular.woff');
+}
+
+@font-face {
+    font-family: 'dongle-bold';
+    src: url('fonts/Dongle-Bold.woff');
+}
+
+@font-face {
+    font-family: 'dongle-light';
+    src: url('fonts/Dongle-Light.woff');
+}
+
+@font-face {
+    font-family: 'jakarta-italic';
+    src: url('fonts/PlusJakartaSans-Italic-VariableFont_wght.woff');
+}
+
+@font-face {
+    font-family: 'jakarta-regular';
+    src: url('fonts/PlusJakartaSans-VariableFont_wght.woff');
+}
